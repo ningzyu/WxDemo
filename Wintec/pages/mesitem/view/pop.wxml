@@ -1,0 +1,9 @@
+<!-- 弹出窗 -->
+<!-- <modal hidden="{{ispop}}" title="这里是title" confirm-text="自定义确定按钮" cancel-text="自定义取消按钮" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{nocancel}}"> -->
+<modal hidden="{{ispop}}" title="视频播放"  bindconfirm="cancel" bindcancel="cancel" confirm-text="取消"
+no-cancel="true">
+<view class='video'>
+<video id="myVideo" src="{{video}}"  objectFit="contain" ></video>
+</view>
+  
+</modal>

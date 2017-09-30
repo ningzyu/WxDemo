@@ -1,0 +1,10 @@
+<!--positems.wxml-->
+<view class="container">
+<view class="postype">
+    	<navigator class="postype-item" catchtap="onptypeitem"
+      data-id="{{item.id}}" wx:for="{{posList}}" wx:key="{{item.id}}" >
+         <image src="{{item.image}}"></image> 
+         <text >{{item.name}}</text> 
+		  </navigator>
+  </view>
+</view>

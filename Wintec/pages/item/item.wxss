@@ -1,0 +1,72 @@
+
+/* 轮播图 */
+.index-banner{
+	width: 100%;
+	height: 400rpx;
+}
+.index-banner .slide-image{
+	width: 100%;
+}
+/* @import "view/tabn.wxss" */
+/**index.wxss**/  
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    border-top: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  
+  font-weight:bold;
+    font-size: 32rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #777777;  
+    
+}  
+.on{ color: #da7c0c;  
+    border-bottom: 5rpx solid #da7c0c;}  
+  
+.swiper-box{ 
+  display: block; height: 100%; width: 100%; 
+  overflow: hidden; }  
+
+.content{
+height: 100%; width: 100%;
+  }
+
+
+.mborder{
+  margin: 10px;
+}
+/* item标题 */
+.txttitle{
+  /* font-weight:bold;
+color: #da7c0c;  
+font-size: 32rpx;  
+display: inline-block;   */
+
+    font-size: 14px;
+    font-weight: 900;
+}
+.txtcontent{
+  /* margin: 12px;
+  font-size: 30rpx;  
+  display: flex;   */
+  margin-left: 10px;
+color:#000;
+display: flex;
+  font-size: 12px;
+    margin-bottom: 6px;
+    /* color: darkgray; */
+  /* font-style:italic; */
+}
+
+
+
+
+
+/* <view class="tag">{{item.tag}}</view>
+        <view wx:for="{{item.singleItems}}">
+            <view class="singleItem" href="{{item.src}}">{{index}}，{{item.title}}</view>
+        </view> */
+

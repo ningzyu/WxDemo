@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="swiper-tab">
+    <!-- <scroll-view scroll-x="true" class="tab-bar" white-space: nowrap;  scroll-left="{{scrollLength}}"> -->
+    <block wx:for="{{tabtitles}}" wx:key="">
+        <view data-index="{{index}}" class="swiper-tab-list {{index==currentTab ? 'on' : ''}}" id="{{item.code}}" bindtap="swichNav">
+            {{item.text}}
+        </view>
+    </block>
+</view>
+<!-- <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange"> -->
+<view style="height:{{winHeight - 31}}px" class='content'>
+    <!-- 产品特点 http://www.wintec.cn/-->
+    <!-- <swiper-item> -->
+    <view wx:for="{{traits}}" class='.txtcontent' hidden="{{currentTab!='0'}}">
+        {{index}}，{{item}}
+    </view>
+    <!-- </swiper-item> -->
+
+    <!-- 技术参数 -->
+    <!-- <swiper-item> -->
+    <view wx:for="{{paralist}}" class='txtcontent' hidden="{{currentTab!='1'}}">
+        <view style="display: block; width: 25%;" >{{item.paramname}} </view>
+        <view style="display: block; width: 75%;">{{item.paramcontent}} </view>
+</view>
+    <!-- </swiper-item> -->
+    <!-- 视屏 -->
+    <!-- <swiper-item> -->
+    <view style="width:100%;" hidden="{{currentTab!='2'}}">
+        <video src="{{videourl}}" style="width:360px;"></video>
+    </view>
+</view>
+<!-- </swiper-item> -->
+<!-- </swiper> -->

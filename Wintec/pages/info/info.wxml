@@ -1,0 +1,19 @@
+
+<view class="group">
+
+  <!-- 用户信息 -->
+  <include src="view/inputs.wxml" />  
+	<!-- 反馈信息	 -->
+  <include src="view/message.wxml" />  
+  <!-- 选择图片 -->
+  <include src="view/addimg.wxml" />  
+  <!-- 弹出窗 -->
+<include src="view/pop.wxml" />
+  <!-- 选择视频 -->
+  <!-- <include src="view/videoadd.wxml" />   -->
+</view>
+<!-- 提交按钮 -->
+<view class="btn-submit">
+	<button class="btn-block btn-orange" bindtap="applySubmit">提交</button>
+</view>
+

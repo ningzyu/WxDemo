@@ -1,0 +1,26 @@
+ <view class="group-header">没用了</view>
+		<view class="group-body">
+			<view class="input-list">
+
+				<view class="input-item">
+					<text class="input-item-label">是否添加</text>
+
+					<view class="input-item-content">
+						<radio-group bindchange="setvideo">
+							<label class="{{!isvideo?'checked':''}}">
+								<radio value="否" checked="{{!isvideo}}"/>否
+							</label>
+							<label class="{{hasfinancing?'checked':''}}">
+								<radio value="是" checked="{{isvideo}}" />是
+							</label>
+						</radio-group>
+					</view>
+				</view>
+
+				<view wx:if="{{isvideo}}">
+        <video src="{{src}}"></video>
+				</view>
+
+        
+		</view>
+</view>

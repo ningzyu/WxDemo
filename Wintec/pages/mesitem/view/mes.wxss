@@ -1,0 +1,67 @@
+
+.bubbleItem{  
+    width: 90%;  
+}  
+.bubble{  
+    max-width: 500rpx;  
+    position: relative;  
+    line-height: 30px;  
+    padding: 5rpx;  
+    padding-top: 3px;  
+    padding-bottom: 3px;  
+    border-radius: 7px;  
+    margin-top: 15px;  
+    padding-right: 10px;  
+    display: inline-block;  
+}  
+.leftBubble{  
+    position: relative;  
+    margin-left: 25px;  
+    border: 1px solid #00b6b6;  
+    background-color: #f8fdfc;  
+}  
+.leftBubble .bottomLevel{  
+    position: absolute;  
+    top: 10px;  
+    left: -10px;  
+    border-top: 10px solid #00b6b6;  
+    border-left: 10px solid transparent;  
+}  
+.leftBubble .topLevel{  
+    position: absolute;  
+    top: 11px;  
+    left: -8px;  
+    border-top: 10px solid #f8fdfc;  
+    border-left: 10px solid transparent;  
+    z-index: 1;  
+}  
+.rightBubble{  
+    position: relative;  
+    margin-right: 25px;  
+    float: right;  
+    background-color: #f9f9f9;
+    border: 1px solid #aaa;  
+}  
+.rightBubble .bottomLevel{  
+    position: absolute;  
+    bottom: 11px;  
+    right: -10px;  
+    border-bottom: 10px solid #aaa;  
+    border-right: 10px solid transparent;  
+}  
+.rightBubble .topLevel{  
+    position: absolute;  
+    bottom: 12px;  
+    right: -8px;  
+    border-bottom: 10px solid #fff;  
+    border-right: 10px solid transparent;  
+    z-index: 1;  
+}  
+.clearfix:after {  
+    visibility: hidden;  
+    display: block;  
+    font-size: 0;  
+    content: " ";  
+    clear: both;  
+    height: 0;  
+}  

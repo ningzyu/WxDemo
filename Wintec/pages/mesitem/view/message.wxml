@@ -1,0 +1,88 @@
+<view class='page'>
+  <block wx:for="{{meslist}}">
+    <view wx:if="{{item.mestype==0}}" class='mes01'>
+      <view class='user'>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" /> 客户名 -- 联系人
+      </view>
+      <view>
+        {{item.content}}
+      </view>
+      <!-- 图片列表 -->
+      <view wx:if="{{item.imgs[0]||item.video}}" class='gallery'>
+        <view wx:for="{{item.imgs}}">
+          <image style="width: {{imageWidth}}px; height: {{imageWidth}}px" class='imgs' src="{{item}}" bindtap="toImage" data-url="{{item}}" />
+        </view>
+        <view wx:if="{{item.video}}" class="item">
+          <image style="width: {{imageWidth}}px; height: {{imageWidth}}px" class='imgs' src="../../images/util/video.jpg" bindtap="playvideo" data-url="{{item.video}}" />
+        </view>
+      </view>
+    </view>
+    <!-- 英泰回复信息 -->
+    <view wx:elif="{{item.mestype==1}}">
+      <view class='data'>
+        <view class='boder'></view>
+        <text>{{item.data}}</text>
+        <view class='boder'></view>
+      </view>
+      <view class='mes02'>
+        <view class='user'>
+          <!-- 英泰头像 -->
+          <view class='pic'>
+            <view>wintec</view>
+          </view>
+          <!-- 会话气泡 -->
+          <view class='bubbleItem'>
+            <view class="bubble leftBubble">
+              <!-- 内容 -->
+              {{item.content}}
+              <view class="bottomLevel"></view>
+              <view class="topLevel"></view>
+              <!-- 图片列表 -->
+              <view wx:if="{{item.imgs[0]||item.video}}" class='gallery'>
+                <view wx:for="{{item.imgs}}">
+                  <image style="width: {{imageWidth}}px; height: {{imageWidth}}px" class='imgs' src="{{item}}" bindtap="toImage" data-url="{{item}}" />
+                </view>
+                <view wx:if="{{item.video}}" class="item">
+                  <image style="width: {{imageWidth}}px; height: {{imageWidth}}px" class='imgs' src="../../images/util/video.jpg" bindtap="playvideo" data-url="{{item.video}}" />
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:elif="{{item.mestype==2}}">
+      <view class='data'>
+        <view class='boder'></view>
+        <text>{{item.data}}</text>
+        <view class='boder'></view>
+      </view>
+      <view class='mes02'>
+
+        <view class='user'>
+          <!-- 会话气泡 -->
+          <view class="bubbleItem clearfix">
+            <!-- <view style="font-family: Arial, Helvetica, sans-serif;">
+            <!--右侧的泡泡-->
+            <!-- </view> -->
+            <view class="bubble rightBubble">
+              {{item.content}}
+              <view class="bottomLevel"></view>
+              <view class="topLevel"></view>
+              <!-- 图片列表 -->
+              <view wx:if="{{item.imgs[0]||item.video}}" class='gallery'>
+                <view wx:for="{{item.imgs}}">
+                  <image style="width: {{imageWidth}}px; height: {{imageWidth}}px" class='imgs' src="{{item}}" bindtap="toImage" data-url="{{item}}" />
+                </view>
+                <view wx:if="{{item.video}}" class="item">
+                  <image style="width: {{imageWidth}}px; height: {{imageWidth}}px" class='imgs' src="../../images/util/video.jpg" bindtap="playvideo" data-url="{{item.video}}" />
+                </view>
+              </view>
+            </view>
+          </view>
+          <image class="userhead" src="{{userInfo.avatarUrl}}" background-size="cover" />
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

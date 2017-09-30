@@ -1,0 +1,32 @@
+.userhead{
+  display: block;
+  width: 80rpx;
+  height:80rpx;
+  border-radius: 50%;
+  align-self:flex-end;
+}
+
+
+/* 用户头像 */
+.userinfo-avatar {
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  /* margin: 20rpx; */
+  /* margin-top: 50rpx; */
+  border-radius: 50%;
+}
+/* 英泰头像 */
+.pic {
+  display: flex;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #029eda;
+  /* 决定主轴的方向column：垂直方向*/
+  flex-direction: column;
+  /* 定义了项目在主轴上的对齐方式 */
+  justify-content: center;
+  /* 定义项目在交叉轴上如何对齐。 */
+  align-items: center;
+}

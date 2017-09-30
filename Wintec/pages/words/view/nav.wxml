@@ -1,0 +1,10 @@
+<scroll-view scroll-x="true" class="tab-bar" white-space: nowrap;  scroll-left="{{scrollLength}}">
+       <block wx:for="{{listTab}}" wx:key="">
+            <view  data-index="{{index}}" 
+                  class="top-bar-item {{index==curIndex ? 'top-bar-active' : ''}}"
+                  id="{{item.code}}" 
+                  bindtap="swichNav">
+                 {{item.text}}
+            </view>
+      </block> 
+</scroll-view> 

@@ -1,0 +1,27 @@
+<!--pages/me/me.wxml-->
+<!-- 头像信息 -->
+<include src="view/user.wxml" />
+<view bindtap="navigateToDonate" class="tableviewcell">
+  <image src="../../images/util/icon_edition.png" />
+  <text>版本号：1.0</text>
+  <text></text>
+</view>
+<view bindtap="navigateToDonate" class="tableviewcell">
+  <image src="../../images/util/icon_phone.png" />
+  <text>客服电话：110-120-119</text>
+</view>
+
+<view bindtap="navigateToDonate" class="tableviewcell">
+  <image src="../../images/util/icon_service.png" />
+  <button open-type="contact">进入客服会话</button>
+  <text></text>
+</view>
+<!-- <view bindtap="navigateToDonate" class="tableviewcell">
+  <image src="../../images/navig/downloadn.png" />
+  <button open-type="share">分享</button>
+  <text></text>
+</view> -->
+<view class='zxing'>
+<image src="../../images/wintec.jpg" ></image>
+<image src="../../images/wintec.jpg" ></image>
+</view>

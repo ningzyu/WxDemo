@@ -1,0 +1,6 @@
+<!--words.wxml-->
+<!-- http://192.168.12.67:8888/WinTec/SkillWord -->
+<view class="topics">
+   <include src="view/nav.wxml" /> 
+  <include src="view/list.wxml" /> 
+</view> 

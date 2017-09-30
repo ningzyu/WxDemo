@@ -1,0 +1,55 @@
+<view class="group-header">反馈信息</view>
+		<view class="group-body">
+			<view class="input-list">
+<!-- 机型 -->
+        <view class="input-item">
+					<text class="input-item-label">反馈类型</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入机型"></input>
+					</view>
+				</view>
+
+
+				<!-- 机型 -->
+        <view class="input-item">
+					<text class="input-item-label">机型</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入机型"></input>
+					</view>
+				</view>
+				<!-- 条码 -->
+        <view class="input-item">
+					<text class="input-item-label">序列号</text>
+					<view class="input-item-content">
+          <view class="form-control">
+						<input type="text" placeholder="请输入条码" value='{{code}}' style='flex-grow:1'></input>
+            <image src="../../images/util/scan.png" style='width: 40rpx; height: 40rpx;' bindtap='scan'/>
+            </view>
+					</view>
+				</view>
+        <!-- 反馈内容 -->
+        <view class="input-item input-item-full">
+					<text class="input-item-label">反馈内容</text>
+					<textarea placeholder="可输入50字" maxlength="50"></textarea>
+				</view>
+
+       
+			</view>
+		</view>
+
+
+
+
+     <!-- 图片选择 -->
+				<!-- <view class="input-item input-item-full">
+				<text class="input-item-label">项目图标</text>
+					<view class="img-upload">
+						<view class="img-add"></view>
+						<view class="img-item">
+							
+						</view>
+						<view class="img-item">
+						
+						</view>
+					</view>
+				</view> -->

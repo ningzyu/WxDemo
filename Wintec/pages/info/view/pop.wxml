@@ -1,0 +1,9 @@
+<!-- 弹出窗 -->
+  <action-sheet hidden="{{isPop}}" bindchange="popChange">
+    <block wx:for-items="{{PopItems}}" wx:for-index="id">
+      <action-sheet-item class="action-item" bindtap="{{clickBinds[id]}}">
+        {{item}}
+      </action-sheet-item>
+    </block>
+    <action-sheet-cancel class='action-cacel'>取消</action-sheet-cancel>
+  </action-sheet>

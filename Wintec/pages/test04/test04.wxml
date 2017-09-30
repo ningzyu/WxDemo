@@ -1,0 +1,31 @@
+<view class="page">
+  <view class="navbar">
+    <block wx:for="{{tabtitles}}" wx:key="">
+      <view data-index="{{index}}" class="navbar-list {{index==currentTab ? 'on' : ''}}" id="{{item.code}}" bindtap="swichNav">
+        {{item.text}}
+      </view>
+    </block>
+  </view>
+  <!-- 内容 -->
+
+  <view style="position: absolute;top: 80rpx;width: 100%;height:{{winHeight}}px; ">
+    <swiper current="{{currentTab}}" duration="300" bindchange="bindChange" style="height:100%;">
+      <!-- 技术文档 -->
+      <swiper-item>
+        <scroll-view scroll-y="true" style="height:100%;">
+          <include src="view/word.wxml" />
+        </scroll-view>
+      </swiper-item>
+      <!-- 驱动下载 -->
+      <swiper-item>
+        <scroll-view scroll-y="true" style="height:100%;">
+          <include src="view/drive.wxml" />
+        </scroll-view>
+      </swiper-item>
+      <!-- 技术支持 -->
+      <swiper-item>
+        <include src="view/online.wxml" />
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

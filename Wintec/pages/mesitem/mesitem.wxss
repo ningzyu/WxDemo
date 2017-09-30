@@ -1,0 +1,155 @@
+/* 气泡 */
+@import "view/mes.wxss";
+/* 头像 */
+@import "view/head.wxss";
+
+page{
+  background: #fff;
+  padding: 0px;
+  margin : 0px 0px 300rpx 0px;
+  flex-grow:1;
+  overflow:scroll;
+   /* height: 100%;  */
+    /* position: absolute;   */
+   /* bottom: 80rpx;  */
+}
+
+
+.pic view{
+  font-size: 20rpx;
+  color: #fff;
+}
+/* 原始信息 */
+.mes01{
+  background: #93DDDD;
+  margin: 30rpx;
+  padding: 20rpx;
+  /* color: #fff; */
+  border-radius: 5%;
+}
+.user {
+  /* 两端对齐 */
+  flex-direction: row;
+  /* justify-content: space-between; */
+  display: flex;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+/*画廊*/
+.gallery {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+  
+}
+
+.imgs{
+  background:#fff;
+  margin: 5px;
+   z-index: 1; 
+   border-radius: 7%;
+}
+
+.mes02{
+  margin: 30rpx;
+  padding: 20rpx;
+}
+.data{
+  display: flex;
+  margin-bottom: -45rpx;
+  height: 40rpx;
+  width: 100%;
+  align-items:center;
+  flex-direction: row;
+}
+.data text{
+  font-size: 24rpx;
+  color: #444;
+  margin: 10rpx;
+  justify-content:center;
+}
+.boder{
+  height:4rpx;
+  flex-grow:1;
+  background-color: #D8D8D8;
+}
+/* 发送 */
+.send{
+   bottom: 0;
+   display: flex;
+   position: fixed;
+   flex-direction:column;
+   z-index: 80;
+   background-color: #f0f0f0;
+}
+
+.post{
+  width: 720rpx;
+  padding: 20rpx 20rpx 20rpx 20rpx ;
+  align-items:center;
+  float: right;
+  border-top: 1rpx solid #D8D8D8; 
+  /* 两端对齐 */
+  flex-direction: row;
+  display: flex;
+  /* justify-content: space-between;  */
+  /* height: 100rpx; */
+  /* background-color: #f0f2f8; */
+  /* position: fixed; */
+  /* bottom: 0; */
+  /* box-shadow: 4px 1px 1px #ccc; */
+}
+.post input{
+   flex-grow:1; 
+   padding: 0rpx 30rpx 0rpx 30rpx;
+  height: 70rpx;
+   margin: 10rpx; 
+  background-color: #fff;
+  justify-content:center;
+  line-height: 70rpx;
+  /* text-align: center; */
+  font-size: 14px; 
+  border-radius: 50rpx;
+}
+
+.askBtn{ 
+   margin: 10rpx; 
+  width: 120rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 50rpx;
+  border: 1px solid #4675F9;
+  color:#4675F9;
+  }
+.uebtn{
+  width: 70rpx;height: 70rpx;
+   margin: 10rpx; 
+}
+/* 视屏 */
+.video{
+  display: flex;
+  align-items:center;
+  flex-direction: row;
+}
+.video video{
+  flex-grow:1; 
+}
+
+.tion{
+  display: flex;
+  border-radius: 7%;
+  background: #fff;
+  margin: 20rpx;
+   border: 1px solid #D8D8D8; 
+  /* border: 1px solid #029eda; */
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tion image{
+  width: 70rpx;
+  height: 70rpx;
+}

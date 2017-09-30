@@ -1,0 +1,20 @@
+<!--pages/newmes/newmes.wxml-->
+<!-- <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange"> -->
+<!-- current         当前所在页面的 index
+autoplay        是否自动切换
+indicator-dots  是否显示面板指示点
+interval        自动切换时间间隔
+duration        滑动动画时长
+vertical        滑动方向是否为纵向
+bindchange      current改变时事件event.detail = {current:current,source: source} -->
+<swiper vertical='true'>
+ <swiper-item  style="height:100%;">
+  <view style="height:100%; background: #333; color:#fff">sssssssssss</view>
+ </swiper-item>
+  <swiper-item style="height:100%;">
+  <view style="height:100%; background: #333; color:#fff">sddddddddddddddd</view>
+ </swiper-item>
+  <swiper-item style="height:100%;">
+  <view style="height:100%; background: #333; color:#fff">ffffffffffff</view>
+ </swiper-item>
+</swiper>

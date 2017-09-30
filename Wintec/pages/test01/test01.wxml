@@ -1,0 +1,76 @@
+<!--info.wxml-->
+  <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  <!-- 地址 -->
+  <view class="wx-cellitem"  bindtap="selectDistrict">
+    <view class="wx-cell">
+      <text class="wx-cell-text">地址：</text>
+      <view style="padding-bot tom:20rpx">{{areaInfo}}</view>
+    </view>
+  </view>
+
+ <view class="wx-cellitem">
+    <view class="wx-cell">
+    
+  <textarea class="wx-cell-text" placeholder="反馈信息" style="height: 3.3em" />
+  </view>
+  </view>
+<view class="gallery">
+	<view class="item" wx:for="{{images}}" wx:key="">
+		<image style="width: {{imageWidth}}px; height: {{imageWidth}}px" src=" {{item}}" bindtap="previewImage" mode="aspectFill" />
+		<!-- 删除按钮 -->
+		<view class="delete" bindtap="delete" data-index="{{index}}">
+    <image style="left: {{imageWidth / 2 - 10}}px;" src="/assets/icon_delete.png" />
+    </view>
+	</view>
+  <!-- 增加按钮 -->
+	<view class="item">
+		<image 
+    style="width: {{imageWidth}}px; height: {{imageWidth}}px"
+     src="/assets/icon_add.png" class="button-upload"
+      bindtap="chooseImage" />
+	</view>
+</view>
+  <button type="primary" bindtap="submit">提交</button>
+  <button type="primary" bindtap="submitimg">提交</button>
+<view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}" bindtap="hideCitySelected" />
+<!--城市三级联动-->
+<!--使用动画时不能wx:if="{{city.length>0&&isVisible}}" ，不能hidden=''属性否则无动画效果-->
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:10% ;width:95%;margin-top:10rpx">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="picker-item">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="">
+        {{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+
+
+
+
+
+
+<!-- 获取视频 -->
+  <!-- <view >
+      <video src="{{src}}"></video>
+      <button bindtap="getvideo">获取视频</button>
+  </view> -->
+
+
+

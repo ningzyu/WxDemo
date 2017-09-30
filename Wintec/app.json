@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/test04/test04",
+    "pages/logs/logs",
+    "pages/words/words",
+    "pages/info/info",
+    "pages/positems/positems",
+    "pages/test01/test01",
+    "pages/item/item",
+    "pages/me/me",
+    "pages/newmes/newmes",
+    "pages/mesitem/mesitem"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#029eda",
+    "navigationBarTitleText": "WINTEC",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#004da0",
+    "color": "#a9b7b7",
+    "borderStyle": "#444",
+    "list": [
+      {
+        "pagePath": "pages/test04/test04",
+        "iconPath": "images/navig/downloadn.png",
+        "selectedIconPath": "images/navig/download.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "images/navig/feedbackn.png",
+        "selectedIconPath": "images/navig/feedback.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/navig/men.png",
+        "selectedIconPath": "images/navig/me.png"
+      }
+    ]
+  }
+}

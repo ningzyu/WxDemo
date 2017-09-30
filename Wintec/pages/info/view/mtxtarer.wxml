@@ -1,0 +1,4 @@
+<view class="group-header">问题描述</view>
+			<view class="group-body">
+				<textarea placeholder="请输入对问题的描述，可输入1000字" maxlength="1000"></textarea>
+			</view>

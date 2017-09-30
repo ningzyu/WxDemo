@@ -1,0 +1,59 @@
+<view class="group-header">用户信息</view>
+<view class="group-body">
+  <view class="input-list">
+
+    <view class="input-item">
+      <text class="input-item-label">客户名称</text>
+      <view class="input-item-content">
+        <view class="form-control">
+          <input style='flex-grow:1' bindblur="validate" data-name="clientName" placeholder="请输入客户名" data-validator="required,clientName" confirm-type="next" value="{{clientName}}" />
+          <icon wx:if="{{form.clientName!==undefined}}" type="{{form.clientName?'warn':'success'}}" size="16" />
+        </view>
+      </view>
+    </view>
+
+    <view class="input-item">
+      <text class="input-item-label">联系人</text>
+      <view class="input-item-content">
+        <view class="form-control">
+          <input style='flex-grow:1' bindblur="validate" data-name="contactsName" placeholder="请输入联系人姓名" data-validator="required,contactsName" confirm-type="next" value="{{contactsName}}" />
+          <icon wx:if="{{form.contactsName!==undefined}}" type="{{form.contactsName?'warn':'success'}}" size="16" />
+        </view>
+
+      </view>
+    </view>
+   
+    <!-- 手机号码 -->
+    <view class="input-item">
+      <text class="input-item-label">手机号码</text>
+      <view class="input-item-content">
+        <!-- type="idcard" -->
+        <view class="form-control">
+          <input maxlength="11" placeholder="请输入手机号码" style='flex-grow:1' bindblur="validate" type="number" data-name="phone" data-validator="required,phone" confirm-type="next" value="{{phone}}" />
+          <icon wx:if="{{form.phone!==undefined}}" type="{{form.phone?'warn':'success'}}" size="16" />
+        </view>
+      </view>
+    </view>
+ <!-- 邮箱 -->
+    <view class="input-item">
+      <text class="input-item-label">邮箱</text>
+      <view class="input-item-content">
+        <view class="form-control">
+          <input style='flex-grow:1' bindblur="validate" data-name="contactsName" placeholder="请输入您的常用邮箱" data-validator="required,contactsName" confirm-type="next" value="{{contactsName}}" />
+          <icon wx:if="{{form.contactsName!==undefined}}" type="{{form.contactsName?'warn':'success'}}" size="16" />
+        </view>
+
+      </view>
+    </view>
+    <view class="input-item">
+      <text class="input-item-label">地址</text>
+      <view class="input-item-content" bindtap="selectDistrict">
+        <view style="padding-bot tom:20rpx"></view>
+        <view class="form-control">
+          <input style='flex-grow:1' bindblur="validate" data-name="location" placeholder="请输入地址" data-validator="required,location" confirm-type="next" value="{{location}}" />
+          <icon wx:if="{{form.location!==undefined}}" type="{{form.location?'warn':'success'}}" size="16" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

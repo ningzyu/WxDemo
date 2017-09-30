@@ -1,0 +1,32 @@
+<!--pages/mesitem/mesitem.wxml-->
+<!-- <view>{{id}}</view> -->
+<view class='container'>
+  <include src="view/message.wxml" />
+  <view class='send'>
+    <view class='post'>
+      <input type="text" bindblur="validate" data-name="clientName" confirm-type="next" value="{{clientName}}" />
+      <image src='../../images/util/ue.png' class='uebtn' bindtap='totion' />
+      <!-- <view class='uebtn'></view> -->
+      <!-- <textarea  maxlength="1000"/> -->
+      <view class='askBtn' bindtap="confirm">发送</view>
+    </view>
+    <!-- 图片按钮 -->
+    <view class='post' hidden="{{isoption}}">
+      <block wx:for-items="{{imgtions}}" wx:for-index="id">
+        <view class='tion' style="width: {{imageWidth}}px; height: {{imageWidth}}px" bindtap="{{clickBinds[id]}}">
+          <image src='../../images/util/{{item}}' />
+        </view>
+      </block>
+    </view>
+    <!-- 图片视频展示列表 -->
+    <view wx:if="{{subimages[0]||subvideo}}" class='gallery'>
+      <view wx:for="{{subimages}}">
+        <image style="width: {{imageWidth}}px; height: {{imageWidth}}px" class='imgs' src="{{item}}" bindtap="toImage" data-url="{{item}}" />
+      </view>
+      <view wx:if="{{subvideo}}" class="item">
+        <video src="{{subvideo}}" style="width: {{imageWidth}}px; height: {{imageWidth}}px" class='imgs'></video>
+      </view>
+    </view>
+  </view>
+  <include src="view/pop.wxml" />
+</view>

@@ -1,0 +1,40 @@
+<!--pages/list/list.wxml-->
+<!-- <view>{{openid}}</view> -->
+<view class='page'>
+  <view wx:if="{{httptype==1}}">
+    <scroll-view scroll-y="true" style="height:100%">
+      <block wx:for="{{meslist}}">
+        <view class='mesitem' bindtap="tomesitem" data-id="{{item[0].newId}}">
+          <view class='pic'>
+            <view class='pic_title'>WINTEC</view>
+            <view class='pic_txt'>{{item[0].type}}</view>
+          </view>
+          <view class='message'>
+            <view class='mescon'>
+              <view class='mestitle'>[反馈]{{item[0].content}}</view>
+              <view class='mesdate'>这里显示时间</view>
+            </view>
+            <view class='mescon'>
+              <view class='mesnew'>{{item[item.length-1].content}}</view>
+              <view class='askBtn' hidden="{{item.notread==0}}">{{item.notread}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <image src="../../images/util/newinfo.png" class="post" bindtap="newinfo" />
+  </view>
+  <view wx:elif="{{httptype ==0}}" class='null'>
+    <view class='pic' bindtap="newinfo">
+      <image src="../../images/util/pen.png" class='pen' />
+    </view>
+    <view>点击新建</view>
+  </view>
+  <view wx:elif="{{httptype ==-1}}" class='null'>
+    请求失败
+  </view>
+
+
+
+
+</view>

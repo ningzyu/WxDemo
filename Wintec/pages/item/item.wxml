@@ -1,0 +1,9 @@
+<!--pages/item/item.wxml-->
+<include src="../index/view/banner.wxml" />
+<view class='mborder'>
+
+
+<view class='txttitle'>产品简介：</view> 
+<text class='txtcontent'>{{itemdata.synopsis}}</text>
+</view>
+<include src="view/tabn.wxml" /> 

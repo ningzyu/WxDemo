@@ -1,0 +1,30 @@
+<view style="height:{{winHeight - 31}}px">
+  <view class="nav_left">
+    <block wx:for="{{drivedata}}"  wx:for-index="idx">
+      <view class="nav_left_items {{driveIndex ==idx ? 'active' : ''}}" bindtap="drivechangeTab"  data-id="{{idx}}">{{item.type}}</view>
+    </block>
+  </view>
+  <view class="nav_right">
+    <view wx:if="{{drivedata[driveIndex].item}}">
+      <scroll-view scroll-y="true" style="height:100%">
+        <block wx:for="{{drivedata[driveIndex].item}}">
+          <!-- <view class="nav_right_items"> -->
+          <view class="item-ans">
+            <view class="avatar">
+              <image class="img" src="../../images/util/drive.png"></image>
+            </view>
+            <view class="expertInfo">
+              <view class="name">{{item.docName}}</view>
+              <navigator class="askBtn" catchtap="download" data-downloads="{{item.downloadPath}}">链接</navigator>
+            </view>
+          </view>
+          <!-- </view> -->
+        </block>
+      </scroll-view>
+    </view>
+    <view wx:else>失败</view>
+  </view>
+  <loading class="loading" hidden="{{hidden}}">
+    <text class="loading-font">正在打开...</text>
+  </loading>
+</view>

@@ -1,0 +1,10 @@
+<!-- 图片按钮 -->
+<view>感谢您对中科英泰的产品感到兴趣，点击可在线咨询</view>
+    <view class='online'>
+      <block wx:for-items="{{onlines}}" wx:for-index="id">
+        <view class='tion' bindtap="{{clickBinds[id]}}">
+          <image src='../../images/util/wx.png' />
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>

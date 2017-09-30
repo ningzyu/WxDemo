@@ -1,0 +1,23 @@
+<view class="word-list">
+
+    <swiper current="{{curIndex}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+        <swiper-item wx:for="{{listTab}}">
+            <scroll-view scroll-y="true" style="height:100%">
+                <block wx:for="{{posList}}" wx:key="*this">
+                    <view class="item-ans">
+                        <view class="avatar">
+                            <image class="img" src="../../images/files.jpg"></image>
+                        </view>
+                        <view class="expertInfo">
+                            <view class="name">{{item.uploaddata}}</view>
+                        </view>
+                        <navigator class="askBtn">下载</navigator>
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>
+<loading class="loading" hidden="{{hidden}}">
+    <text class="loading-font">加载中...</text>
+</loading>

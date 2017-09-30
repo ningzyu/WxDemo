@@ -1,0 +1,48 @@
+/* positems.wxss */
+
+.container .brand_item{
+    margin: 5px 0;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+.container .brand_item .pic{
+    float: left;
+    width: 50%;
+    height: 120px;
+}
+.postype{
+  margin-top: 30rpx;
+	width: 100%;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	background: #fff;
+}
+.postype-item{
+	-webkit-flex: 0 0 49%;
+	-webkit-box-flex: 0;
+	        flex: 0 0 49%;
+	max-width: 49%;
+	text-align: center;
+	margin-top: 10rpx;
+/* 	border-top: 1rpx solid #ddd;
+	border-bottom: 1rpx solid #ddd;
+	border-right: 1rpx solid #ddd; */
+	padding: 10rpx 10rpx;
+	box-sizing: border-box;
+	margin-bottom: -1rpx;
+}
+
+.postype-item image{
+	width: 230rpx;
+	height: 230rpx;
+  /* border-radius: 50%; */
+}
+.postype-item text{
+	display: block;
+	font-size: 30rpx;
+	line-height: 1.4;
+	white-space: nowrap;
+}

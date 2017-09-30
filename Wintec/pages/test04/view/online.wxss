@@ -1,0 +1,37 @@
+.online{
+  display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+  /* background: #029eda; */
+  /* 决定主轴的方向 row（默认值）row-reverse：水平方向右/column：垂直方向/column-reverse：垂直方向起点在下。 */
+  /* flex-direction: column; */
+  /* 定义了项目在主轴上的对齐方式 */
+  /* justify-content: center; */
+  /* 定义项目在交叉轴上如何对齐。 */
+  /* align-items: center; */
+}
+/* .online image{
+  width: 290rpx;
+  height: 290rpx;
+  margin: 35rpx;
+} */
+
+
+.tion{
+  width: 290rpx;
+  height: 290rpx;
+  display: flex;
+  border-radius: 7%;
+  background: #fff;
+  margin: 40rpx;
+   /* border: 1px solid #D8D8D8;  */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #029eda;
+  color:  #029eda;
+}
+.tion image{
+  width: 75rpx;
+  height: 60rpx;
+}

@@ -1,0 +1,35 @@
+page {
+  background: #fff;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+/**Tab选项卡标题**/
+.navbar {
+  width: 100%;
+  border-bottom: 2rpx solid #777;
+  text-align: center;
+  line-height: 80rpx;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list {
+  font-weight: bold;
+  font-size: 32rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #777;
+}
+
+.on {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+@import "view/word.wxss";
+@import "view/online.wxss";
